@@ -1,0 +1,86 @@
+:root {
+    --blue-1: #0A2647;
+    --blue-2: #144272;
+    --blue-3: #1b4e90;
+    --blue-4: #236ac6;
+    --blue-5: #3387f5;
+    --blue-6: #66abff;
+    --blue-7: #cee4ff;
+
+    --yellow-1: #3e321b;
+    --yellow-2: #8d6822;
+    --yellow-3: #f7ae26;
+    --yellow-4: #ffd27e;
+
+    --green-1: #1a341a;
+    --green-2: #244c24;
+    --green-3: #28a828;
+    --green-4: #88ff88;
+
+    --red-1: #341a1a;
+    --red-2: #4c2424;
+    --red-6: #ff8888;
+    /*Neutral*/
+
+    --white: #fff;
+    --black: #070707;
+
+    --gray: #c5cad0;
+
+    --dark-1: #111213;
+    --dark-2: #25282b;
+    --dark-3: #363a3e;
+    --dark-4: #585d64;
+}
+
+body {
+    background-color: var(--dark-1);
+    color: var(--white);
+}
+
+.navbar {
+    background-color: var(--dark-2);
+}
+
+.btn-primary {
+    background-color: var(--blue-4);
+    color: var(--white);
+}   
+    .btn-primary:is(:hover) {
+        background-color: var(--blue-3);
+        color: var(--gray);
+    }
+
+
+.btn-secondary {
+    background-color: var(--dark-4);
+}
+    .btn-secondary:is(:hover, :active) {
+        background-color: var(--dark-3);
+        box-shadow: none !important;
+    }
+    .btn-secondary:is(:focus) {
+        box-shadow: none;
+    } 
+
+.btn-link {
+    color: var(--gray);
+    text-decoration: none;
+}   
+    .btn-link:is(:hover, :active, :focus){
+        text-decoration: none;
+        color: var(--blue-7);
+    } 
+
+
+.alert-success {
+    background-color: var(--green-1);
+    border: 1px solid var(--green-2);
+    color: var(--green-6);
+}
+
+.alert-danger {
+    background-color: var(--red-1);
+    border: 1px solid var(--red-2);
+    color: var(--red-6);
+}

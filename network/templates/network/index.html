@@ -1,0 +1,31 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'network/css/index.css' %}">
+{% endblock %}
+
+{% block body %}
+<section class="all-posts col-md-4 mx-auto mt-4">
+    <p id="page-message"></p>
+    <input type="hidden" name="user" id="request-user" value="{{ user }}">
+    <div class="new-post px-3 py-2 rounded">
+        <h2 class="mb-2">New Post</h2>
+        <form class="new-post__form" action="{% url 'create_post' %}" method="post">
+            {% csrf_token %}
+            <textarea name="content" class="new-post__content form-control" 
+            placeholder="Type some text here!" required></textarea>
+            <input class="new-post__submit btn btn-primary mt-2" type="submit" value="Create Post">
+        </form>
+    </div>
+    <p class="new-post__message"></p>
+    <p class="post__message"></p>
+    <div id="all-posts-view" class="d-flex flex-column">
+        <noscript>Enable JavaScript to see the posts!</noscript>
+    </div>
+</section>
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'network/js/index.js' %}"></script>
+{% endblock %}
